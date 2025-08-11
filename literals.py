@@ -1,0 +1,15 @@
+0
+111
+0.0
+3.14
+"alma"
+'alma'
+""
+200_000
+"10"
+print(type(10))
+print(type(10.0))
+print(type("fwe"))
+True
+False
+print(type(True))
