@@ -35,5 +35,7 @@ def max(a: int, b: int) -> int:
     return a if a > b else b
 
 
-print(signum(10))
-print(signum(-10))
+if __name__ == "__main__":
+    print("SAMPLES")
+    print(signum(10))
+    print(signum(-10))
