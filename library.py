@@ -16,12 +16,46 @@ def input_book() -> dict:
     return {"title": title, "author": author, "isbn": isbn}
 
 
-books = {}
-while True:
-    choice = input_choice()
-    if choice == 1:
-        book = input_book()
-        books[book["isbn"]] = book
+def print_books(books: dict) -> None:
+    if not books:
+        print("Nincsenek könyvek.")
+        return
+    for book in books.values():
+        print(format_book(book))
 
-    if choice == 99:
-        break
+
+def input_isbn() -> None:
+    return input("Add meg az ISBN-t: ")
+
+
+def format_book(book: dict) -> str:
+    return f"{book['isbn']}: {book['title']} ({book['author']})"
+
+
+def find_book_by_isbn(books: dict, isbn: str) -> None:
+    if not books:
+        print("Nincsenek könyvek.")
+    elif isbn not in books:
+        print("Nem találtam könyvet.")
+    else:
+        book = books[isbn]
+        print(format_book(book))
+
+
+if __name__ == "__main__":
+    books = {}
+    while True:
+        choice = input_choice()
+        if choice == 1:
+            book = input_book()
+            books[book["isbn"]] = book
+        elif choice == 2:
+            print_books(books)
+        elif choice == 3:
+            isbn = input_isbn()
+            find_book_by_isbn(books, isbn)
+        elif choice == 99:
+            break
+        else:
+            print("Érvénytelen menüpont, próbáld újra.")
+    print("Viszlát!")
