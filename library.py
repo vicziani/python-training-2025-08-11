@@ -1,3 +1,6 @@
+import library_bl as bl
+
+
 def input_choice() -> int:
     print("1. Könyv hozzáadása")
     print("2. Könyvek listázása")
@@ -43,14 +46,6 @@ def find_book_by_isbn(books: dict, isbn: str) -> None:
         print(format_book(book))
 
 
-def find_books_by_part(books: dict, part: str) -> list:
-    result = []
-    for book in books.values():
-        if part.lower() in book["title"].lower():
-            result.append(book)
-    return result
-
-
 def input_part() -> str:
     return input("Add meg a cím részletet: ").strip()
 
@@ -69,7 +64,7 @@ if __name__ == "__main__":
             find_book_by_isbn(books, isbn)
         elif choice == 4:
             part = input_part()
-            found_books = find_books_by_part(books, part)
+            found_books = bl.find_books_by_part(books, part)
             print_books(found_books, "Nincsenek találatok.")
         elif choice == 99:
             break
