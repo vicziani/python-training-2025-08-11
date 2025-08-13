@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Kiss Péter",
+        "salary": 1250
+    },
+    {
+        "id": 2,
+        "name": "Nagy Anna",
+        "salary": 1500
+    },
+    {
+        "id": 3,
+        "name": "Szabó László",
+        "salary": 1750
+    },
+    {
+        "id": 4,
+        "name": "Tóth Éva",
+        "salary": 2000
+    },
+    {
+        "id": 5,
+        "name": "Farkas Gábor",
+        "salary": 2250
+    },
+    {
+        "id": 6,
+        "name": "Molnár Katalin",
+        "salary": 2500
+    },
+    {
+        "id": 7,
+        "name": "Horváth Tamás",
+        "salary": 2750
+    },
+    {
+        "id": 8,
+        "name": "Varga Mária",
+        "salary": 3000
+    },
+    {
+        "id": 9,
+        "name": "Balogh István",
+        "salary": 3250
+    },
+    {
+        "id": 10,
+        "name": "Papp Zsuzsanna",
+        "salary": 3500
+    }
+]
